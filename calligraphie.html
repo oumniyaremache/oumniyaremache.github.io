@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>No More Reality - Oumniya Remache</title>
+<title>Calligraphie- Oumniya Remache</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
     body {
@@ -89,6 +89,41 @@
     display: none;
 }
 
+    /* --- Nouvelle grille --- */
+    .grille-projet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    /* Grande image */
+    .grande-image {
+          flex: 1 1 100%; /* force la grande image sur toute la largeur */
+}
+
+    .grande-image img {
+        width: 100%;
+        height: 90vh;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* --- Texte du projet --- */
+    .texte-projet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 700px;
+    }
+
+    .projet-title {
+        font-size: 38px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
 /* --- Responsive --- */
 @media (max-width: 650px) {
   /* espace sous header */
@@ -129,79 +164,8 @@
         overflow: hidden;
         text-overflow: ellipsis;
     }
-
      }
 
-    /* --- Nouvelle grille --- */
-    .grille-projet {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin-bottom: 30px;
-    }
-
-    /* Grande image */
-    .grande-image {
-          flex: 1 1 100%; /* force la grande image sur toute la largeur */
-}
-
-    .grande-image img {
-        width: 100%;
-        height: 50vh;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-        display: block;
-    }
-
-    /* 3 petites images */
-    .petite-image {
-        flex: 1 1 calc(33.33% - 14px);
-    }
-
-    .petite-image img {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        object-fit: cover;
-        display: block;
-    }
-
-    .petite-image img,
-.petite-image video {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    display: block;
-}
-
-    /* --- Texte du projet --- */
-    .texte-projet {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        max-width: 700px;
-    }
-
-    .projet-title {
-        font-size: 38px;
-        font-weight: 400;
-        margin-bottom: 15px;
-    }
-
-    /* Responsive */
-    @media (max-width: 650px) {
-
-        .petite-image {
-            flex: 1 1 100%;
-        }
-
-        .texte-projet {
-            grid-template-columns: 1fr;
-        }
-
-        .projet-title {
-            font-size: 24px;
-        }
-    }
 
 </style>
 </head>
@@ -212,22 +176,7 @@
 
         <!-- Grande image -->
         <div class="grande-image">
-            <img src="img/tlr-mockup.png" alt="Affiche No More Reality">
-        </div>
-
-
-        <!-- 3 petites images -->
-        <div class="petite-image">
-            <img src="img/tlr-bleu.png" alt="">
-        </div>
-
-        <div class="petite-image">
-            <img src="img/tIr-interieur.png" alt="">
-        </div>
-
-
-        <div class="petite-image">
-            <img src="img/tlr-rouge.png" alt="">
+            <img src="img/calligraphie.jpg" alt="Affiche No More Reality">
         </div>
 
     </div>

@@ -185,56 +185,92 @@ body {
 }
 
 /* === MOBILE / SMALL SCREENS === */
-@media (max-width: 650px) {
+/* === MOBILE / SMALL SCREENS === */
+@media (max-width: 950px) {
 
-    body { padding-top: 60px; }
+    /* espace sous header */
+    body { 
+        padding-top: 60px; 
+    }
 
-    /* Header */
+    /* --- HEADER --- */
     .header {
-        height: 60px;
+        height: 55px;         /* plus compact */
+        padding: 0 10px;
         gap: 5px;
         border-bottom: 1.5px solid blue;
     }
 
     .header img { 
-        height: 25px; 
+        height: 22px;         /* LOGO PLUS PETIT */
+        width: auto;
     }
 
-    /* Masquer catégories */
-    .header nav.categories { display: none; }
+    /* cacher les catégories */
+    .header nav.categories { 
+        display: none !important;
+    }
 
-    /* Right menu réduit sur une ligne */
+    /* right menu réduit */
     .header .right-menu {
         gap: 10px;
-        white-space: nowrap;
         flex-shrink: 1;
-        min-width: 0;
         overflow: hidden;
+        min-width: 0;
+        white-space: nowrap;
     }
 
     .header a {
-        font-size: 15px;
+        font-size: 14px;
         white-space: nowrap;
-        text-overflow: ellipsis;
         overflow: hidden;
+        text-overflow: ellipsis;
     }
 
-    /* Bandeau défilant */
-    .scrolling-text-container { height: 38px; border-bottom: 1.5px solid blue; }
-    .scrolling-track { animation-duration: 26s; }
-    .scrolling-group span { font-size: 16px; }
+    /* --- SCROLLING TEXT --- */
+    .scrolling-text-container { 
+        height: 36px; 
+        border-bottom: 1.5px solid blue; 
+    }
 
-    /* Grille d’images sur une colonne */
-    .nav { grid-template-columns: 1fr; gap: 10px; padding: 15px; }
-    .nav a img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .scrolling-track {
+        animation-duration: 24s;
+    }
 
-    /* Texte projet */
-    .texte-projet { grid-template-columns: 1fr; gap: 10px; }
-    .projet-title { font-size: 24px; }
+    .scrolling-group span {
+        font-size: 15px;
+    }
+
+    /* --- GRILLE des PROJETS : 1 colonne --- */
+    .nav {
+        grid-template-columns: 1fr !important;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .nav a img {
+        width: 100%;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    .nav a span {
+        font-size: 14px;
+        font-weight: 400;
+    }
 }
 
+.footer{
+    font-size: 10px;
+    margin-top: auto;
+    margin-bottom: 5px;
+    text-align: center;
+    color: blue;
+}
+
+
 /* === TABLET / INTERMEDIATE SCREENS === */
-@media (max-width: 900px) and (min-width: 651px) {
+/* @media (max-width: 900px){
 
     body { padding-top: 60px; }
 
@@ -245,7 +281,10 @@ body {
         border-bottom: 1.5px solid blue;
     }
 
-    .header img { height: 30px; }
+    .header img {
+    height: 25px;
+    width: auto;
+    }
 
     .header nav.categories { display: flex; gap: 10px; }
 
@@ -260,9 +299,10 @@ body {
     .header a { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
     .nav { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .nav a img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+    .nav a img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }/*
 
     /* Texte projet */
-    .texte-projet { grid-template-columns: 1fr 1fr; }
+    /*.texte-projet { grid-template-columns: 1fr 1fr; }
     .projet-title { font-size: 28px; }
-}
+} /*
+
