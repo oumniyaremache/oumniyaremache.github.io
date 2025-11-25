@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palestine Day Festival</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        background: #ffffff;
+        color: blue;
+        line-height: 1.5;
+        padding: 20px;
+        padding-top: 80px;
+    }
+
+    /* --- Header --- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #ffffff;
+    border-bottom: 2px solid blue;
+    color: blue;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+}
+
+/* Groupe logo + catégories */
+.header .left {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.header .logo{
+    align-items: center;
+    display: flex;
+}
+
+/* Logo */
+.header img {
+    height: 35px;
+    width: auto;
+}
+
+/* Menu droit */
+.header .right-menu {
+    display: flex;
+    gap: 20px;
+    margin-right: 40px;
+    white-space: nowrap;
+    flex-shrink: 1;
+}
+
+/* Liens du header */
+.header a {
+    position: relative;
+    text-decoration: none;
+    color: currentColor;
+    font-size: clamp(14px, 1.8vw, 20px);
+    font-weight: 400;
+}
+
+/* Soulignement progressif */
+.header a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 1.5px;
+    background: blue;
+    transition: width 0.5s ease;
+}
+
+.header a:hover::after {
+    width: 100%;
+}
+
+.header a.logo::after {
+    display: none;
+}
+
+/* --- Responsive --- */
+@media (max-width: 650px) {
+    .header {
+        height: 60px;
+        padding: 0 15px;
+    }
+
+    .header a.logo img {
+        height: 35px;
+    }
+
+    .header .right-menu {
+        gap: 10px;
+    }
+
+    .header a {
+        font-size: 16px;
+    }
+}
+
+
+    /* --- Nouvelle grille --- */
+    .grille-projet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+
+    /* Grande image */
+    .grande-image {
+          flex: 1 1 100%; /* force la grande image sur toute la largeur */
+}
+
+    .grande-image img {
+        width: 100%;
+        height: 50vh;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* 3 petites images */
+    .petite-image {
+        flex: 1 1 calc(33.33% - 14px);
+    }
+
+    .petite-image img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        display: block;
+    }
+
+    .petite-image img,
+.petite-image video {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+}
+
+    /* --- Texte du projet --- */
+    .texte-projet {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        max-width: 700px;
+    }
+
+    .projet-title {
+        font-size: 38px;
+        font-weight: 400;
+        margin-bottom: 15px;
+    }
+
+    /* Responsive */
+    @media (max-width: 650px) {
+
+        .petite-image {
+            flex: 1 1 100%;
+        }
+
+        .texte-projet {
+            grid-template-columns: 1fr;
+        }
+
+        .projet-title {
+            font-size: 24px;
+        }
+    }
+
+</style>
+</head>
+<body>
+
+    <!-- Grille images -->
+    <div class="grille-projet">
+
+        <!-- Grande image -->
+        <div class="grande-image">
+            <img src="img/palestine-poster.png" alt="Affiche No More Reality">
+        </div>
+
+
+        <!-- 3 petites images -->
+        <div class="petite-image">
+            <img src="img/palestine-mockup.png" alt="">
+        </div>
+
+        <div class="petite-image">
+            <img src="img/couv-palestine.jpeg" alt="">
+        </div>
+
+
+        <div class="petite-image">
+            <img src="img/palestine-bag.png" alt="">
+        </div>
+
+    </div>
+<header class="header">
+    <div class="left">
+        <!-- Logo cliquable vers l'accueil -->
+        <a href="index.html" class="logo">
+            <img src="img/logosite.svg" alt="Logo">
+        </a>
+    </div>
+
+    <div class="right-menu">
+        <a href="a-propos.html">à propos</a>
+        <a href="mailto:oumniyaremache2108@gmail.com">contact</a>
+        <a href="https://www.instagram.com/oumniyaremache/" target="_blank">instagram</a>
+    </div>
+</header>
+
+    <h1 class="projet-title">No more reality</h1>
+
+    <div class="texte-projet">
+        <p>
+            Identité visuelle et affiches pour la Journée d’étude du CNAM autour du thème « No More Reality ». 
+            Objectif : concevoir une série d’affiches évolutives, servant à la fois de signalétique et de communication 
+            auprès des étudiants, en jouant sur la narration et la progression visuelle.
+        </p>
+        <p>
+            Ce projet explore la relation entre image et récit graphique, permettant aux étudiants de naviguer dans un univers visuel clair et progressif. 
+            Les affiches s’adaptent à différents formats tout en conservant leur cohérence visuelle.
+        </p>
+    </div>
+
+</body>
+</html>
+
